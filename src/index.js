@@ -25,7 +25,7 @@ const handlePropsData = (data = []) => {
   let copyData = cloneDeep(data)
 
   copyData.map((val, idx) => {
-    val.selected = false
+    val.selected = !!val.selected || false
     val._id = idx + 1
   })
 
