@@ -51,7 +51,7 @@ export default (
 
             return <div key={col.valueKey}
                         style={{width: col.width, height: rowHeight, lineHeight: rowHeight + 'px'}}
-                        {...tdRestProps}>{row.render ? row.render(row[col.valueKey],row) : row[col.valueKey]}</div>
+                        {...tdRestProps}>{col.render ? col.render(row[col.valueKey],row) : row[col.valueKey]}</div>
           })
         }
       </div>
